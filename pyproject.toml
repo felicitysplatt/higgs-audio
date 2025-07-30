@@ -1,6 +1,71 @@
+[project]
+name = "higgs-audio"
+version = "0.1.0"
+description = "Higgs Audio V2: Redefining Expressiveness in Audio Generation"
+authors = [
+    {name = "Boson AI", email = "info@boson.ai"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+keywords = ["audio", "tts", "text-to-speech", "ai", "machine-learning"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Multimedia :: Sound/Audio :: Speech",
+]
+
+dependencies = [
+    "descript-audio-codec",
+    "torch",
+    "transformers>=4.45.1,<4.47.0",
+    "librosa",
+    "dacite",
+    "boto3==1.35.36",
+    "s3fs",
+    "torchvision",
+    "torchaudio",
+    "json_repair",
+    "pandas",
+    "pydantic",
+    "vector_quantize_pytorch",
+    "loguru",
+    "pydub",
+    "omegaconf",
+    "click",
+    "langid",
+    "jieba",
+    "accelerate>=0.26.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff==0.12.2",
+    "jupyter",
+    "ipykernel",
+    "pytest",
+    "black",
+    "mypy",
+]
+
+[project.urls]
+Homepage = "https://github.com/boson-ai/higgs-audio"
+Documentation = "https://github.com/boson-ai/higgs-audio"
+Repository = "https://github.com/boson-ai/higgs-audio"
+"Bug Tracker" = "https://github.com/boson-ai/higgs-audio/issues"
+
 [build-system]
-requires = ["setuptools"]
-build-backend = "setuptools.build_meta"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["boson_multimodal"]
 
 [tool.ruff]
 line-length = 119
@@ -14,7 +79,6 @@ exclude = [
     ".git-rewrite",
     ".hg",
     ".ipynb_checkpoints",
-    ".mypy_cache",
     ".nox",
     ".pants.d",
     ".pyenv",
@@ -65,7 +129,7 @@ ignore = [
 
 [tool.ruff.lint.isort]
 lines-after-imports = 2
-known-first-party = ["character_tuning"]
+known-first-party = ["boson_multimodal"]
 
 [tool.ruff.format]
 # Like Black, use double quotes for strings.
@@ -98,4 +162,3 @@ docstring-code-line-length = "dynamic"
 "os.getenv".msg = "Use os.environ instead"
 "os.putenv".msg = "Use os.environ instead"
 "os.unsetenv".msg = "Use os.environ instead"
-
