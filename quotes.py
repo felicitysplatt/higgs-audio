@@ -221,35 +221,6 @@ nick_cave_quotes = {
     "Cave_InspirationWordUsed": "'Inspiration' is a word used by people who aren't really doing anything."
 }
 
-# Ryan Holiday
-ryan_holiday_quotes = {
-    "Holiday_ObstaclePath": "The obstacle in the path becomes the path. Never forget, within every obstacle is an opportunity to improve our condition.",
-    "Holiday_PerceptionAction": "Where the head goes, the body follows. Perception precedes action. Right action follows the right perspective.",
-    "Holiday_WritingNotEasy": "No one will argue that writing is an easy profession…",
-    "Holiday_FocusOnMoment": "Focus on the moment, not the monsters that may or may not be up ahead.",
-    "Holiday_FailureShowsWay": "Failure shows us the way – by showing us what isn't the way.",
-    "Holiday_PersistenceSiege": "It's okay to be discouraged. It's not okay to quit… that’s persistence.",
-    "Holiday_BuildRealLife": "Building things up in real life is better than building them up in your imagination.",
-    "Holiday_EndureTragedy": "To do great things, we need to be able to endure tragedy and setbacks…",
-    "Holiday_Sitzfleisch": "The Germans have a word for it: Sitzfleisch. Staying power…",
-    "Holiday_IntelligentRead": "When intelligent people read, they ask themselves a simple question: What do I plan to do with this information?",
-    "Holiday_WeaknessStrength": "Great individuals, like great companies, find a way to transform weakness into strength.",
-    "Holiday_PerceptionStory": "There is no good or bad without us, there is only perception…",
-    "Holiday_BookInvestment": "Dollar for dollar there is no better investment in the world than a book.",
-    "Holiday_QuietWill": "True will is quiet humility, resilience, and flexibility…",
-    "Holiday_ProblemsPerception": "Problems are rarely as bad as we think—or rather, they are precisely as bad as we think.",
-    "Holiday_DecideBreakResist": "We decide what we will make of each and every situation. We decide whether we’ll break or whether we’ll resist.",
-    "Holiday_DisciplinePerception": "Discipline in perception lets you clearly see the advantage and the proper course of action…",
-    "Holiday_RunDigestDay": "I run 5 miles every night. It’s where I go to digest my day…",
-    "Holiday_ConningConmen": "Conning the conmen is one of life’s most satisfying pleasures.",
-    "Holiday_ProveOrNeeds": "Am I saying this because I want to prove how smart I am or because it needs to be said?",
-    "Holiday_EntrepreneurFaith": "An entrepreneur is someone with faith in their ability to make something where there was nothing before.",
-    "Holiday_PredictorAnger": "The most powerful predictor of what spreads online is anger.",
-    "Holiday_TurnMisfortuneAdvantage": "Great people turn personal tragedy or misfortune to their advantage.",
-    "Holiday_NoEasyNews": "You cannot have your news instantly and have it done well… There is no easy way.",
-    "Holiday_ImplicitExplicit": "Before anything can be resolved, the implicit must be made explicit."
-}
-
 bob_ross_quotes = {
     "Ross_HappyLittleAccidents": "We don't make mistakes, just happy little accidents.",
     "Ross_TalentPursuedInterest": "Talent is a pursued interest. Anything that you're willing to practice, you can do.",
@@ -301,4 +272,33 @@ bob_ross_quotes = {
     "Ross_FindFreedomCanvas": "Find freedom on this canvas.",
     "Ross_DeadTreesNormal": "In nature, dead trees are just as normal as live trees.",
     "Ross_DontSetCloudsOnFire": "We don't want to set these clouds on fire."
+}
+
+# Ryan Holiday
+ryan_holiday_quotes = {
+    "Holiday_ObstaclePath": "The obstacle in the path becomes the path. Never forget, within every obstacle is an opportunity to improve our condition.",
+    "Holiday_PerceptionAction": "Where the head goes, the body follows. Perception precedes action. Right action follows the right perspective.",
+    "Holiday_WritingNotEasy": "No one will argue that writing is an easy profession…",
+    "Holiday_FocusOnMoment": "Focus on the moment, not the monsters that may or may not be up ahead.",
+    "Holiday_FailureShowsWay": "Failure shows us the way – by showing us what isn't the way.",
+    "Holiday_PersistenceSiege": "It's okay to be discouraged. It's not okay to quit… that’s persistence.",
+    "Holiday_BuildRealLife": "Building things up in real life is better than building them up in your imagination.",
+    "Holiday_EndureTragedy": "To do great things, we need to be able to endure tragedy and setbacks…",
+    "Holiday_Sitzfleisch": "The Germans have a word for it: Sitzfleisch. Staying power…",
+    "Holiday_IntelligentRead": "When intelligent people read, they ask themselves a simple question: What do I plan to do with this information?",
+    "Holiday_WeaknessStrength": "Great individuals, like great companies, find a way to transform weakness into strength.",
+    "Holiday_PerceptionStory": "There is no good or bad without us, there is only perception…",
+    "Holiday_BookInvestment": "Dollar for dollar there is no better investment in the world than a book.",
+    "Holiday_QuietWill": "True will is quiet humility, resilience, and flexibility…",
+    "Holiday_ProblemsPerception": "Problems are rarely as bad as we think—or rather, they are precisely as bad as we think.",
+    "Holiday_DecideBreakResist": "We decide what we will make of each and every situation. We decide whether we’ll break or whether we’ll resist.",
+    "Holiday_DisciplinePerception": "Discipline in perception lets you clearly see the advantage and the proper course of action…",
+    "Holiday_RunDigestDay": "I run 5 miles every night. It’s where I go to digest my day…",
+    "Holiday_ConningConmen": "Conning the conmen is one of life’s most satisfying pleasures.",
+    "Holiday_ProveOrNeeds": "Am I saying this because I want to prove how smart I am or because it needs to be said?",
+    "Holiday_EntrepreneurFaith": "An entrepreneur is someone with faith in their ability to make something where there was nothing before.",
+    "Holiday_PredictorAnger": "The most powerful predictor of what spreads online is anger.",
+    "Holiday_TurnMisfortuneAdvantage": "Great people turn personal tragedy or misfortune to their advantage.",
+    "Holiday_NoEasyNews": "You cannot have your news instantly and have it done well… There is no easy way.",
+    "Holiday_ImplicitExplicit": "Before anything can be resolved, the implicit must be made explicit."
 }
