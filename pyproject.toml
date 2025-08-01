@@ -6,7 +6,7 @@ authors = [
     {name = "Boson AI", email = "info@boson.ai"}
 ]
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = "=3.10"
 license = {text = "MIT"}
 keywords = ["audio", "tts", "text-to-speech", "ai", "machine-learning"]
 classifiers = [
