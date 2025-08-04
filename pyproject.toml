@@ -6,7 +6,7 @@ authors = [
     {name = "Boson AI", email = "info@boson.ai"}
 ]
 readme = "README.md"
-requires-python = "=3.10"
+requires-python = ">=3.10,<3.11"
 license = {text = "MIT"}
 keywords = ["audio", "tts", "text-to-speech", "ai", "machine-learning"]
 classifiers = [
@@ -23,14 +23,14 @@ classifiers = [
 
 dependencies = [
     "descript-audio-codec",
-    "torch",
+    "torch>=2.5.1",
     "transformers>=4.45.1,<4.47.0",
-    "librosa",
+    "librosa>=0.10.0",
     "dacite",
     "boto3==1.35.36",
     "s3fs",
-    "torchvision",
-    "torchaudio",
+    "torchvision>=0.20.1",
+    "torchaudio>=2.5.1",
     "json_repair",
     "pandas",
     "pydantic",
@@ -42,6 +42,11 @@ dependencies = [
     "langid",
     "jieba",
     "accelerate>=0.26.0",
+]
+
+[tool.uv]
+index = [
+    {url = "https://download.pytorch.org/whl/cu121", name = "pytorch"}
 ]
 
 [project.optional-dependencies]
