@@ -274,6 +274,65 @@ bob_ross_quotes = {
     "Ross_DontSetCloudsOnFire": "We don't want to set these clouds on fire."
 }
 
+
+johnny_cash_quotes = {
+    "Cash_HelloImJohnnyCash": "Hello, I'm Johnny Cash.",
+    "Cash_WearBlackPoorBeaten": "I wear the black for the poor and the beaten down, livin' in the hopeless, hungry side of town.",
+    "Cash_WearBlackComfortable": "I wear black because I’m comfortable in it. But then in the summertime when it’s hot I’m comfortable in light blue.",
+    "Cash_BuildOnFailure": "You build on failure. You use it as a stepping stone. Close the door on the past. You don't try to forget the mistakes, but you don't dwell on it.",
+    "Cash_SuccessExceptMoney": "Success is having to worry about every damn thing in the world, except money.",
+    "Cash_ChooseLoveOverHate": "All your life, you will be faced with a choice. You can choose love or hate... I choose love.",
+    "Cash_LearnFromMistakes": "I learn from my mistakes. It's a very painful way to learn, but without pain there's no gain.",
+    "Cash_TwoPeopleFight": "Sometimes I am two people. Johnny is the nice one. Cash causes all the trouble. They fight.",
+    "Cash_HatedByRightPeople": "It's good to know who hates you and it is good to be hated by the right people.",
+    "Cash_ThrilledWithLife": "I'm not bitter. Why should I be bitter? I'm thrilled to death with life.",
+
+    "Cash_BeastInMe": "The beast in me is caged by frail and fragile bars.",
+    "Cash_NoWayAroundGrief": "There's no way around grief and loss; you can dodge all you want, but sooner or later you just have to go into it.",
+    "Cash_BearArmsFlag": "I love the freedoms we got in this country; I appreciate your freedom to burn your flag if you want to, but I really appreciate my right to bear arms so I can shoot you if you try to burn mine.",
+    "Cash_LifeQuestionAnswer": "Life is the question and life is the answer, and God is the reason and love is the way.",
+    "Cash_MusicPlayOn": "Life and love go on, let the music play.",
+    "Cash_WhenGodForgaveMe": "When God forgave me, I figured I'd better do it too.",
+    "Cash_MoreILearnExcited": "The more I learn, the more excited I get.",
+    "Cash_BlamedNotCaught": "There's a lot of things blamed on me that never happened. But then, there's a lot of things that I did that I never got caught at.",
+    "Cash_SymbolOfRebellion": "I wore black because I liked it. I still do, and wearing it still means something to me. It's still my symbol of rebellion.",
+    "Cash_BeWhatYouAre": "You have to be what you are. Whatever you are, you gotta be it.",
+
+    "Cash_SayExactlyFeel": "If you aren't gonna say exactly how and what you feel, you might as well not say anything at all.",
+    "Cash_LifeIsRoughTough": "Life is rough so you gotta be tough.",
+    "Cash_TogetherIfAtAll": "We're all in this together if we're in it at all.",
+    "Cash_ListenToYourHeart": "A person knows when it just seems to feel right to them. Listen to your heart.",
+    "Cash_BiggestSinner": "There is a spiritual side to me that goes real deep, but I confess right up front that I'm the biggest sinner of them all.",
+    "Cash_HappinessLovedOnes": "Happiness is being at peace, being with loved ones, being comfortable... but most of all, it's having those loved ones.",
+    "Cash_RedeemedDontGiveUp": "No matter how much you've sinned, no matter how far you've got from God, don't give up. You can still be redeemed.",
+    "Cash_DarkBroughtToLight": "As sure as God made black and white, what's done in the dark will be brought to the light.",
+    "Cash_IDontGiveUp": "I don't give up because I don't give up. I don't believe in it.",
+    "Cash_KnowYourLimitations": "You've got to know your limitations. I found out that there weren't too many limitations, if I did it my way.",
+
+    "Cash_LoveSongsList": "I love songs about horses, railroads, land, Judgment Day, family, hard times, whiskey, courtship, marriage, adultery, separation, murder, war, prison, rambling, damnation, home, salvation, death, pride, humor, piety, rebellion, patriotism, larceny, determination, tragedy, rowdiness, heartbreak and love. And Mother. And God.",
+    "Cash_OlderTeachYounger": "Those that have lived longer than us always have something to teach us that we can take with us for the rest of our lives.",
+    "Cash_NoFenceHeavenHell": "How well I have learned that there is no fence to sit on between heaven and hell.",
+    "Cash_RoseGreyMidnight": "A rose looks grey at midnight, but the flame is just asleep. And steel is strong because it knows the hammer and white heat.",
+    "Cash_FollowConscience": "I'm not really concerned about boundaries. I just follow my conscience and my heart.",
+    "Cash_MistakesOpportunities": "You miss a lot of opportunities by making mistakes, but that's part of it: knowing that you're not shut out forever.",
+    "Cash_EqualUnderGrass": "We'll all be equal under the grass, and God's got a heaven for country trash.",
+    "Cash_SoulSatisfyingKingdom": "I have tried drugs and a little of everything else, and there is nothing in the world more soul-satisfying than having the kingdom of God building inside you and growing.",
+    "Cash_UntilThingsBrighter": "Until things are brighter... I'm the man in black.",
+    "Cash_BurnMyFlagLove": "Burn my flag and I will shoot you—but I'll shoot you with a lot of love, like a good American.",
+
+    "Cash_MasterOfLifeGood": "The Master of Life’s been good to me. He has given me strength to face past illnesses, and victory in the face of defeat.",
+    "Cash_GetRhythmBlues": "Get rhythm when you get the blues.",
+    "Cash_WildWillLead": "The ones that you're calling wild are going to be the leaders in a little while.",
+    "Cash_BelieveYourselfOthers": "It's good to believe in yourself, but there are people out there who can make or break you.",
+    "Cash_ManInBlackLyrics": "I wear the black for the prisoner who has long paid for his crime, but is there because he's a victim of the times.",
+    "Cash_TrustLoveReal": "Trust gets you killed. Love gets you hurt. And being real gets you hated.",
+    "Cash_RealManLiveForGod": "It takes a real man to live for God—a lot more man than to live for the devil, you know?",
+    "Cash_BeingRichWorry": "Being rich means you get to worry about everything except money.",
+    "Cash_AskPeopleIDontGiveUp": "You can ask the people around me. I don't give up. I don't give up because I don't give up.",
+    "Cash_WhatIsParadise": "This morning, with her, drinking coffee — that's what paradise is to me."
+}
+
+
 # Ryan Holiday
 ryan_holiday_quotes = {
     "Holiday_ObstaclePath": "The obstacle in the path becomes the path. Never forget, within every obstacle is an opportunity to improve our condition.",
