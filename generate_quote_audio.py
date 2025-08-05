@@ -120,8 +120,16 @@ def generate_audio_for_quote(quote_key, quote_text, voice_prompt, output_folder,
         logger.info(f"SKIP: {quote_key} - File already exists and is valid")
         return True
     
-    # Use default 'python' command; rely on .venv to provide correct Python version
-    python_cmd = "python"
+    # Use Python 3.10 virtual environment if it exists, otherwise fallback to current interpreter
+    venv_python = os.path.join("venv_py310", "Scripts", "python.exe") if os.name == "nt" else os.path.join("venv_py310", "bin", "python")
+    
+    if os.path.exists(venv_python):
+        python_cmd = venv_python
+        logger.info(f"Using Python 3.10 virtual environment: {python_cmd}")
+    else:
+        # Fallback to current interpreter
+        python_cmd = sys.executable
+        logger.info(f"Python 3.10 venv not found, using current interpreter: {python_cmd}")
     
     # Construct the command to run examples/generation.py
     cmd = [
@@ -213,78 +221,58 @@ def main():
     successful_generations = 0
     skipped_generations = 0
     
-    # TEST VERSION: Process only Henry Rollins quotes, limited to 10
-    test_author = "henry_rollins"
-    test_quote_dict = QUOTE_DICTIONARIES[test_author]
-    voice_prompt = VOICE_MAPPING[test_author]
-    output_folder = f"output_audio/{test_author}"
-    
-    # Create output folder
-    try:
-        os.makedirs(output_folder, exist_ok=True)
-    except Exception as e:
-        logger.error(f"Failed to create output folder {output_folder}: {e}")
-        return 1
-    
-    logger.info(f"\n{'='*60}")
-    logger.info(f"TEST MODE: Processing {test_author} quotes with voice: {voice_prompt}")
-    logger.info(f"Output folder: {output_folder}")
-    logger.info(f"LIMITED TO: 10 quotes")
+    # FULL VERSION: Process all authors and all quotes
+    logger.info(f"FULL MODE: Processing all {len(QUOTE_DICTIONARIES)} authors")
     logger.info(f"RESUME: Will skip existing valid files")
     logger.info(f"RETRY: Will retry failed generations up to 2 times")
+    logger.info(f"GRACEFUL SHUTDOWN: Press Ctrl+C to stop safely")
     logger.info(f"{'='*60}")
     
-    # Process only first 10 quotes for testing
-    quote_count = 0
-    for quote_key, quote_text in test_quote_dict.items():
-        if quote_count >= 10:  # Limit to 10 quotes
-            break
+    # Process each author's quotes
+    for author, quote_dict in QUOTE_DICTIONARIES.items():
+        voice_prompt = VOICE_MAPPING[author]
+        output_folder = f"output_audio/{author}"
         
-        # Check for shutdown request
-        if shutdown_requested:
-            logger.warning("Shutdown requested, stopping generation...")
-            break
-            
-        total_quotes += 1
-        quote_count += 1
-        
-        # Check if file already exists (resume functionality)
-        output_path = os.path.join(output_folder, f"{quote_key}.wav")
-        if file_exists_and_valid(output_path):
-            logger.info(f"SKIP: {quote_key} - File already exists and is valid")
-            successful_generations += 1
-            skipped_generations += 1
-            logger.info("-" * 40)
+        # Create output folder
+        try:
+            os.makedirs(output_folder, exist_ok=True)
+        except Exception as e:
+            logger.error(f"Failed to create output folder {output_folder}: {e}")
             continue
         
-        success = generate_audio_for_quote(quote_key, quote_text, voice_prompt, output_folder)
-        if success:
-            successful_generations += 1
+        logger.info(f"\n{'='*60}")
+        logger.info(f"Processing {author} quotes with voice: {voice_prompt}")
+        logger.info(f"Output folder: {output_folder}")
+        logger.info(f"Total quotes for {author}: {len(quote_dict)}")
+        logger.info(f"{'='*60}")
         
-        logger.info("-" * 40)
-    
-    # FULL VERSION (COMMENTED OUT FOR TESTING)
-    # # Process each author's quotes
-    # for author, quote_dict in QUOTE_DICTIONARIES.items():
-    #     voice_prompt = VOICE_MAPPING[author]
-    #     output_folder = f"output_audio/{author}"
-    #     
-    #     # Create output folder
-    #     os.makedirs(output_folder, exist_ok=True)
-    #     logger.info(f"\n{'='*60}")
-    #     logger.info(f"Processing {author} quotes with voice: {voice_prompt}")
-    #     logger.info(f"Output folder: {output_folder}")
-    #     logger.info(f"{'='*60}")
-    #     
-    #     # Process each quote for this author
-    #     for quote_key, quote_text in quote_dict.items():
-    #         total_quotes += 1
-    #         
-    #         success = generate_audio_for_quote(quote_key, quote_text, voice_prompt, output_folder)
-    #         if success:
-    #             successful_generations += 1
-    #         
-    #         logger.info("-" * 40)
+        # Process each quote for this author
+        for quote_key, quote_text in quote_dict.items():
+            # Check for shutdown request
+            if shutdown_requested:
+                logger.warning("Shutdown requested, stopping generation...")
+                break
+                
+            total_quotes += 1
+            
+            # Check if file already exists (resume functionality)
+            output_path = os.path.join(output_folder, f"{quote_key}.wav")
+            if file_exists_and_valid(output_path):
+                logger.info(f"SKIP: {quote_key} - File already exists and is valid")
+                successful_generations += 1
+                skipped_generations += 1
+                logger.info("-" * 40)
+                continue
+            
+            success = generate_audio_for_quote(quote_key, quote_text, voice_prompt, output_folder)
+            if success:
+                successful_generations += 1
+            
+            logger.info("-" * 40)
+        
+        # Check if we should stop after this author
+        if shutdown_requested:
+            break
     
     # Summary
     logger.info(f"\n{'='*60}")
