@@ -196,6 +196,20 @@ def generate_audio_for_quote(quote_key, quote_text, voice_prompt, output_folder,
 
 def main():
     """Main function to process all quotes."""
+    # Set up logging to both console and file
+    timestamp = time.strftime("%Y%m%d_%H%M%S")
+    log_file = f"logs/generate_quotes_{timestamp}.log"
+    
+    # Create logs directory if it doesn't exist
+    os.makedirs("logs", exist_ok=True)
+    
+    # Configure loguru to write to both console and file
+    logger.remove()  # Remove default handler
+    logger.add(sys.stderr, level="INFO")  # Console output
+    logger.add(log_file, level="INFO", rotation="100 MB")  # File output with rotation
+    
+    logger.info(f"Log file: {log_file}")
+    
     # Set up signal handlers for graceful shutdown
     signal.signal(signal.SIGINT, signal_handler)
     signal.signal(signal.SIGTERM, signal_handler)
